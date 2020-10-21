@@ -1,17 +1,15 @@
-function openExplain() {
+ var openExplain = () => {
     element = document.getElementById('content');
     element.style.display = 'block';
 }
 
-function closeExplain() {
+var closeExplain = () => {
     element = document.getElementById('content');
     element.style.display = 'none';
 }
 
-function doOver(element) {
-    document.getElementById('image').innerHTML = element.alt;
-}
+var doOver = (element) => {return document.getElementById('image').innerHTML = element.alt;}
 
-function doOut() {
+var doOut = () => {
     document.getElementById('image').innerHTML = "Hover over an imagine";
 }
