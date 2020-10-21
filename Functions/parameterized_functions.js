@@ -7,6 +7,6 @@ function getFullName(firstname, lastname) {
     console.log(`${firstname} ${lastname}`)
 }
 
-sayHello("King");
-sayHello("Hagan");
-getFullName('Hagan', 'Vrazel')
+// sayHello("King");
+// sayHello("Hagan");
+// getFullName('Hagan', 'Vrazel')
