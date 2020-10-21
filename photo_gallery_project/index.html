@@ -7,14 +7,26 @@
 </head>
 <body>
 
-    <h2>
+    <h2 id="header">
         Photo Gallery Project
     </h2>
 
-    <img src="images/1.jpg" height="100" width="200">
-    <img src="images/2.jpg" height="100" width="200">
-    <img src="images/3.jpg" height="100" width="200">
-    <img src="images/4.jpg" height="100" width="200">
+    <p id="image">Hover over an image below to display here...</p>
+
+    <button onclick="openExplain()">Explain Pictures</button>
+    <button onclick="closeExplain()">Hide Explaination</button>
+
+    <p id="content">This program is free software: you can redistribute it and/or modify it if you want. This program is free software: you can redistribute it and/or modify it if you want.
+        This program is free software: you can redistribute it and/or modify it if you want.
+        This program is free software: you can redistribute it and/or modify it if you want.
+    </p>
+
+    <img src="images/1.jpg" alt="TypeScript tutorial 1" height="100" width="200" onmousemove="doOver(this)" onmouseout="doOut()">
+    <img src="images/2.jpg" alt="TypeScript tutorial 2" height="100" width="200" onmousemove="doOver(this)" onmouseout="doOut()">
+    <img src="images/3.jpg" alt="TypeScript tutorial 3" height="100" width="200" onmousemove="doOver(this)" onmouseout="doOut()">
+    <img src="images/4.jpg" alt="TypeScript tutorial 4" height="100" width="200" onmousemove="doOver(this)" onmouseout="doOut()">
+
+    <script src="myscript.js"></script>
     
     
 </body>
