@@ -17,17 +17,21 @@
 
 //  console.log(add(100, 200));
 
-var sayHello = () => console.log("Hello Everyone")
+// var sayHello = () => console.log("Hello Everyone")
 
-sayHello();
+// sayHello();
 
-var sayHelloWithMessage = () => {
-    console.log("Hello Everyone")
-    console.log("Lets learn interesting facts about JS!")
-}
+// var sayHelloWithMessage = () => {
+//     console.log("Hello Everyone")
+//     console.log("Lets learn interesting facts about JS!")
+// }
 
-sayHelloWithMessage();
+// sayHelloWithMessage();
 
-var add = (num1, num2) => {return num1 + num2}
+// var add = (num1, num2) => {return num1 + num2}
 
-console.log(add(100,200))
+// console.log(add(100,200))
+
+let numbers = [4,2,6];
+numbers.sort((a,b) => b - a);
+console.log(numbers)
