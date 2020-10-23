@@ -1,0 +1,15 @@
+Synchronous Approach:
+
+Synchronous Code is executed in sequence.
+Each Statement waits for the preveious statement to finish before executing.
+
+Asynchronous Approach:
+
+Asynchronous code doesn't have to wait.
+Although, your program can continue to run.
+It helps reducing the wait time for the user.
+
+To write async code in JS/Node.js, you can use:
+    1. Callback
+    2. Promises
+    3. async/await
