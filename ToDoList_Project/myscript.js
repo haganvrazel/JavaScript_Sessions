@@ -1,59 +1,61 @@
-/**
- * Create a close button to each item in the list.. 
- */
-
-var list = document.getElementsByTagName('li');
-for (i = 0; i < list.length; i++) {
-    var span = document.createElement('span');   // <span></span>
-    var text = document.createTextNode("\u00D7");  // X
-    span.appendChild(text);
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
     span.className = "close";
-    list[i].appendChild(span);
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
 }
 
-
-// Click on close button to hide the current list item.
-var close = document.getElementsByClassName('close');
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
 var i;
-for (i=0;i<close.length;i++) {
+for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
         var div = this.parentElement;
-        div.style.display = 'None';
+        div.style.display = "none";
     }
 }
 
-function newTodo() {
-    
-    var inputValue = document.getElementById('myInput').value;
-    var text = document.createTextNode(inputValue);
-    var li = document.createElement('li');
-    li.append(text);
-
-    if (inputValue == '') {
-        alert('You must write something')
-    } else {
-        document.getElementById('myList').appendChild(li);
-        document.getElementById('myInput').value = '';
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function (ev) {
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
     }
+}, false);
 
-    var span = document.createElement('span');   // <span></span>
-    var text = document.createTextNode("\u00D7");  // X
-    span.appendChild(text);
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+        alert("You must write something!");
+    } else {
+        document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
     span.className = "close";
+    span.appendChild(txt);
     li.appendChild(span);
 
-    for (i=0;i<close.length;i++) {
+    for (i = 0; i < close.length; i++) {
         close[i].onclick = function () {
             var div = this.parentElement;
-            div.style.display = 'None';
+            div.style.display = "none";
         }
     }
-    
-
 }
 
+//Clearing the list
 function removeAll() {
-    // var list = document.getElementById('myList');
-    var list = document.getElementsByTagName('ul');
-    list[0].innerHTML = "";
+    var lst = document.getElementsByTagName("ul");
+    lst[0].innerHTML = "";
 }
